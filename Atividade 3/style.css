@@ -1,0 +1,237 @@
+/* Fonte do google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@400;700&display=swap');
+
+/* Corpo */
+body {
+    background: linear-gradient(90deg, #350909, #101b46, #350909);
+    color: #eeeeee;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 25px;
+}
+
+/* Títulos */
+h1, h2, h3 {
+    font-family: "Orbitron", sans-serif;
+    color: #ffd166;
+    text-align: center;
+}
+
+h1 {
+    background: linear-gradient(90deg, #650000, #b91c1c, #102c68);
+    color: #ffe4a0;
+    font-size: 40px;
+    padding: 30px 15px;
+    border-bottom: 3px solid #ffd166;
+    border-radius: 12px;
+    animation: descer 1s;
+}
+
+h2 {
+    border-bottom: 2px solid #c51b2b;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+/* Parágrafos e listas */
+p {
+    line-height: 1.8;
+    text-align: justify;
+}
+
+ul, ol {
+    line-height: 2;
+}
+
+/* Caixa de destaque */
+.destaque {
+    background: linear-gradient(135deg, rgba(150, 20, 30, 0.35), rgba(15, 35, 85, 0.55));
+    border: 2px solid #d4a72c;
+    border-radius: 18px;
+    padding: 25px;
+    margin: 25px auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Imagens */
+img {
+    display: block;
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+/* Links */
+a {
+    color: #ffd166;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #b91c1c;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+a:hover {
+    color: white;
+    background-color: #a71919;
+}
+
+/* Menu */
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 14px;
+    background-color: #090f25;
+}
+
+/* Mentor e aprendiz: FLEXBOX */
+.historia {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.historia img {
+    width: 50%;
+    border: 3px solid #b91c1c;
+}
+
+.historia-texto {
+    width: 50%;
+}
+
+/* Cards: GRID */
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+}
+
+.card {
+    position: relative;
+    background: linear-gradient(145deg, rgba(120, 15, 25, 0.35), rgba(15, 35, 85, 0.5));
+    border: 1px solid #a82020;
+    border-radius: 15px;
+    overflow: hidden;
+    animation: aparecer 1.5s;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.card-texto {
+    padding: 15px;
+}
+
+.card p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Hover no card */
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #ffd166;
+    box-shadow: 0 10px 25px black;
+}
+
+/* Etiqueta do ano */
+.etiqueta {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 4px 12px;
+    font-weight: bold;
+    background-color: #173b83;
+    border: 1px solid #ffd166;
+    border-radius: 20px;
+}
+
+/* Rodapé: FLEXBOX */
+footer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 3px solid #b91c1c;
+}
+
+/* Cor ao selecionar o texto */
+::selection {
+    background-color: #a71919;
+    color: white;
+}
+
+/* Animações */
+@keyframes descer {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Tablet: telas de até 900px */
+@media (max-width: 900px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Celular: telas de até 600px */
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .historia {
+        flex-direction: column;
+    }
+
+    .historia img,
+    .historia-texto {
+        width: 100%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+}
