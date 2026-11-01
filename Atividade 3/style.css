@@ -217,12 +217,14 @@ nav {
     letter-spacing: 1px;
 }
 
+
 .linha-layout {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
 }
+
 
 .lateral {
     width: 22%;
@@ -235,10 +237,6 @@ nav {
     flex: 1;
     max-width: none;
     margin: 0;
-}
-
-.lateral {
-    animation: flutuar 4s linear infinite;
 }
 
 .lateral {
