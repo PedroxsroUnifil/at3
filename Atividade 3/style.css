@@ -128,6 +128,7 @@ nav {
 
 .historia-texto ul.destaque {
     list-style-position: inside;
+
 }
 
 /* Cards: GRID */
@@ -236,6 +237,49 @@ nav {
     margin: 0;
 }
 
+.lateral {
+    animation: flutuar 4s linear infinite;
+}
+
+.lateral {
+    animation: flutuar 4s linear infinite;
+}
+
+.lateral:last-child {
+    animation-delay: -2s;
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(0);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        animation-timing-function: ease-out;
+    }
+
+    25% {
+        transform: translateY(-16px);
+        box-shadow: 0 0 25px rgba(255, 209, 102, 0.6);
+        animation-timing-function: ease-in;
+    }
+
+    50% {
+        transform: translateY(0);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        animation-timing-function: ease-out;
+    }
+
+    75% {
+        transform: translateY(16px);
+        box-shadow: 0 0 25px rgba(5, 116, 241, 0.6);
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+        transform: translateY(0);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+}
+
 /* Rodapé: FLEXBOX */
 footer {
     display: flex;
@@ -243,6 +287,15 @@ footer {
     margin-top: 40px;
     padding: 20px;
     border-top: 3px solid #b91c1c;
+}
+
+.topo {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 16px;
+    background-color: #090f25;
+    z-index: 20;
 }
 
 /* Cor ao selecionar o texto */
